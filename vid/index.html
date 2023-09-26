@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Landing page</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="showcase ">
+      <header>
+        <h2 class="logo">Travel</h2>
+        <div class="toggle "></div>
+      </header>
+      <video src="nature_vid.mp4" muted loop autoplay></video>
+      <div class="overlay"></div>
+      <div class="text">
+        <h2>Never Stop</h2>
+        <h3>Exploring The Unseen World</h3>
+        <p>
+          Nature is an endless source of beauty. From the breathtaking
+          landscapes of rolling hills and pristine lakes to the delicate petals
+          of a flower, beauty is all around us in the natural world. Nature
+          operates in a delicate balance and harmony. Ecosystems thrive when
+          every element plays its part, reminding us of the importance of
+          balance in our own lives. Nature has an incredible ability to adapt
+          and bounce back from adversity. It teaches us about the strength of
+          resilience and the capacity to recover from challenges.
+        </p>
+        <a href="#">Explore</a>
+      </div>
+      <ul class="social">
+        <li><a href="#"><img src="facebook.png" alt=""></a></li>
+        <li><a href="#"><img src="instagram.png" alt=""></a></li>
+        <li><a href="#"><img src="twitter.png" alt=""></a></li>
+        
+      </ul>
+    </section>
+    <div class="menu">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">blog</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Call us</a></li>
+        </ul>
+    </div>
+    <script>
+        const menu = document.querySelector('.toggle');
+        const showcase = document.querySelector('.showcase');
+    
+        menu.addEventListener('click', () => {
+            menu.classList.toggle('active');
+            showcase.classList.toggle('active');
+        });
+    </script>
+  </body>
+</html>
