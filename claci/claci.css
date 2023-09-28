@@ -46,6 +46,7 @@
     color: white;
     border-radius: 10px;
     box-shadow: 10px 6px 5px rgba(89, 86, 86, 0.435);
+    cursor: pointer;
 }
 .diplay input{
     width: 100%;
