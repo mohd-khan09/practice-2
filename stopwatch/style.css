@@ -1,0 +1,43 @@
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-family: sans-serif;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color: yellowgreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.stopwatch{
+    background-color: rgb(88, 215, 237);
+    padding: 10px;
+    border-radius: 10px;
+}
+#dispaly_time{
+   padding: 10px;
+   margin: 10px;
+   letter-spacing: 10px;
+   font-size: 50px;
+   border: 2px solid black;
+   border-radius: 10px;
+}
+.buttons button:hover{
+    background-color: #44e320
+}
+
+.buttons button{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid black;
+    box-shadow:5px 5px 15px;
+    background-color: yellow;
+    transition: 0.5s
+ 
+}
