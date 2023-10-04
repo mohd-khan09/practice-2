@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="claci.css" />
+    <title>calci</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="calci">
+        <div class="diplay">
+          <input type="text" id="display" readonly  />
+        </div>
+        <div class="ac-button">
+          <button onclick="del()">Del</button>
+          <button onclick="clr_display()">Ac</button>
+        </div>
+        <div class="buttons">
+          <button onclick="display_value_to_screen(7)">7</button>
+          <button onclick="display_value_to_screen(8)">8</button>
+          <button onclick="display_value_to_screen(9)">9</button>
+          <button onclick="display_value_to_screen('/')" class="pink">/</button>
+        </div>
+        <div class="buttons">
+          <button onclick="display_value_to_screen(4)">4</button>
+          <button onclick="display_value_to_screen(5)">5</button>
+          <button onclick="display_value_to_screen(6)">6</button>
+          <button onclick="display_value_to_screen('*')" class="pink">x</button>
+        </div>
+        <div class="buttons">
+          <button onclick="display_value_to_screen(1)">1</button>
+          <button onclick="display_value_to_screen(2)">2</button>
+          <button onclick="display_value_to_screen(3)">3</button>
+          <button onclick="display_value_to_screen('-')" class="pink">-</button>
+        </div>
+        <div class="buttons">
+          <button onclick="display_value_to_screen(0)">0</button>
+          <button onclick="display_value_to_screen('.')">.</button>
+          <button onclick="calculate()" class="red">=</button>
+          <button onclick="display_value_to_screen('+')" class="pink">+</button>
+        </div>
+      </div>
+    </div>
+    <script>
+      const display = document.getElementById("display");
+
+      /* funcion used to display the vales on to screen */
+      function display_value_to_screen(value) {
+        display.value += value;
+        console.log("value:", value);
+      }
+      /* funcion used to clear the dsiplay */
+      function clr_display() {
+        display.value = "";
+      }
+      /* funcion used to calculate the values */
+      function calculate() {
+        let input = display.value;
+        let result;
+        try {
+          result = perform_calculation(input);
+        } catch (error) {
+          result = "error";
+        }
+        display.value =result
+      }
+      function perform_calculation(expression) {
+    const operators = ['+', '-', '*', '/'];
+    const tokens = expression.split(/\b/).filter(token => token.trim() !== '');
+    let currentNumber = parseFloat(tokens[0]);
+    let currentOperator = null;
+
+    for (let i = 1; i < tokens.length; i++) {
+        const token = tokens[i].trim();
+        if (operators.includes(token)) {
+            currentOperator = token;
+        } else {
+            const number = parseFloat(token);
+            if (!isNaN(number)) {
+                if (currentOperator === '+') {
+                    currentNumber += number;
+                } else if (currentOperator === '-') {
+                    currentNumber -= number;
+                } else if (currentOperator === '*') {
+                    currentNumber *= number;
+                } else if (currentOperator === '/') {
+                    if (number !== 0) {
+                        currentNumber /= number;
+                    } else {
+                        throw new Error('Division by zero');
+                    }
+                } else {
+                    throw new Error('Invalid operator');
+                }
+            } else {
+                throw new Error('Invalid number');
+            }
+        }
+    }
+    return currentNumber.toFixed(2); // Return the calculated result with two decimal places.
+}
+
+      /* funcion used to delete last value */
+      function del() {
+        current_val = display.value;
+        display.value = current_val.slice(0, -1);
+      }
+    </script>
+  </body>
+</html>
