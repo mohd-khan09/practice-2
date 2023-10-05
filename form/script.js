@@ -34,6 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
             alert("Email is already registered");
             return;
         }
+        alert("Regestration Done sucessfully")
 
         localStorage.setItem(email, JSON.stringify(formData))
         try {
