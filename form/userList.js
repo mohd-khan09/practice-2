@@ -1,5 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    const loggedInUser =localStorage.getItem('loggedInUser')
+    if(!loggedInUser){
+  
+      window.location.href = 'index.html'
+    }
+
 
     function displayUsers() {
         const allEmails = Object.keys(localStorage)
@@ -20,4 +26,18 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     displayUsers()
+
+    const btn = document.getElementById('logoutBtn')
+    btn.addEventListener('click',()=>{
+
+    })
+
+})
+
+function deletedata (){
+    localStorage.removeItem('loggedInUser')
+    window.location.href = 'index.html'
+}
+window.addEventListener('storage',(e)=>{
+    console.log("hello")
 })

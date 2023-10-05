@@ -1,6 +1,16 @@
 
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById('myForm')
+         
+
+      const loggedInUser =localStorage.getItem('loggedInUser')
+      if(!loggedInUser){
+    alert('no user found')
+      }else{
+        window.location.href = 'list.html'
+      }
+
+
 
     form.addEventListener('submit', async (e) => {
         e.preventDefault();
@@ -26,8 +36,6 @@ document.addEventListener("DOMContentLoaded", () => {
         const formData = {
             Email: email,
             Password: password,
-            passcheck: passcheck,
-            Checked: checked
         }
         const existingData = JSON.parse(localStorage.getItem(email));
         if (existingData) {
