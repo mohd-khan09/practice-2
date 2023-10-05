@@ -16,6 +16,7 @@ const form=  document.getElementById('loginForm')
 
         if (userdata.Email === loginEmail && userdata.Password === loginPassword) {
             alert("user logged in succesfully")
+            window.location.href ='list.html'
         } else {
             alert("invalid email adress or password")
         }

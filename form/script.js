@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
             alert("password dosent match")
             return
         }
-   
+
         const formData = {
             Email: email,
             Password: password,
@@ -35,7 +35,10 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
         alert("Regestration Done sucessfully")
-
+        document.getElementById('exampleInputEmail1').value = '';
+        document.getElementById('exampleInputPassword1').value = '';
+        document.getElementById('exampleInputPassword2').value = '';
+        document.getElementById('exampleCheck1').checked = false;
         localStorage.setItem(email, JSON.stringify(formData))
         try {
             const res = await axios.post("https://reqres.in/api/users", formData)
