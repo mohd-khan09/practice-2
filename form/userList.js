@@ -5,8 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
       window.location.href = 'index.html'
     }
-
-
+    
     function displayUsers() {
         const allEmails = Object.keys(localStorage)
 
@@ -38,6 +37,3 @@ function deletedata (){
     localStorage.removeItem('loggedInUser')
     window.location.href = 'index.html'
 }
-window.addEventListener('storage',(e)=>{
-    console.log("hello")
-})
