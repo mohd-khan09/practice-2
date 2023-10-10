@@ -1,0 +1,37 @@
+.container-spl .Specializations{
+  color: #000;
+  font-family: Poppins;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+}
+.circle p {
+  color: #000;
+
+  font-family: Poppins;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  width: 332px;
+  margin-bottom: -65px;
+  margin-left: 20px;
+
+}
+.container-spl {
+  display: flex;
+  flex-direction: column;
+  padding-left: 120px;
+}
+.sixe-box {
+  width: 867;
+  height: 435;
+  padding-top: 78px;
+}
+
+.circle{
+   margin-left: 800px;
+   margin-top: -100px;
+}
+
+
+

@@ -1,0 +1,47 @@
+.info {
+  position: relative;
+  display: flex;
+}
+.presentation-box {
+  display: flex;
+}
+
+.profieimg{
+  width: 115px;
+height: 115px;
+margin-left: 118px;
+margin-top: 222px;
+}
+div.presentation-box .desc-1{
+  color: #666;
+font-family: Poppins;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+
+margin-top: 232px;
+}
+div.presentation-box .desc-2{
+  color: #000;
+font-family: Poppins;
+font-size: 25px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+
+}
+.alingment{
+  margin-left: 30px;
+}
+.social-logo{
+  padding-top: 5px;
+}
+.github-logo{
+  margin-right: 10px;
+ 
+}
+.side-element{
+  padding-top: 40px;
+  padding-left: 280px;
+}

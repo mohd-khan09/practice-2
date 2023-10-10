@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;1,300;1,400&display=swap');
+
+.footer {
+    width: 100%;
+    height: 397px;
+    background: #FFF;/* Set your desired background color */
+    text-align: center; /* Center the text horizontally */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer .icons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 150px;
+   
+}
+
+.icons a {
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* Remove text decoration from the links */
+    margin-bottom: 17px; /* Add some spacing between the links */
+    color: #000;
+font-family: Poppins;
+font-size: 15px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.icons a img {
+    width: 30px; /* Set your desired icon width */
+    height: 30px; /* Set your desired icon height */
+    margin-right: 17px; /* Add some spacing between the icon and the text */
+}

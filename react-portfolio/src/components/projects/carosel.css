@@ -1,0 +1,44 @@
+.containerCarosel{
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   padding-top: 74px;
+}
+.carditem{
+    display: flex;
+}
+.card{
+    width: 300px;
+}
+
+.carditem .arrow-icon{
+
+    font-size: 35px;
+   
+  }
+  .svgs{
+    display: flex;
+  margin-left: -50px;
+  padding-top: 15px;
+  }
+.desktop{
+    width: 32px;
+    height: 20px;
+    margin-left: -66px;
+   
+}
+.java{
+    width: 32px;
+    height: 20px;
+    margin-left: -222px;
+}
+.card .icons{
+    display: flex;
+    justify-content: flex-end;
+  
+    margin-bottom: -20px;
+}
+.icons .icon-size {
+    font-size: 30px; /* Set your desired icon size here */
+  
+}

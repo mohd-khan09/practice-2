@@ -1,0 +1,29 @@
+.containerMain img{
+    width: 100%;
+}
+.containerMain .projects{
+    color: #000;
+    font-family: Poppins;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-top: -700px;
+    padding-left: 120px;
+
+}
+.containerMain p{
+    color: #000;
+    text-align: justify;
+    font-family: Poppins;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-left: 120px;
+
+
+}
+.box{
+    padding-top: 50px;
+}
